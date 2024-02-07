@@ -1,0 +1,29 @@
+.profile {
+    margin-left: 5px;
+  box-sizing: border-box;
+  width: 115;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+ 
+  margin: 20px;
+}
+
+.profile-picture > img {
+    width: 100%;
+}
+
+.profile-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.25rem;
+}

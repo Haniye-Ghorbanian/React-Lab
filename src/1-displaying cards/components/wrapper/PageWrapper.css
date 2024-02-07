@@ -1,0 +1,16 @@
+#wrapper {
+  height: 100vh;
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    0deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

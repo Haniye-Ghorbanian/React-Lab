@@ -1,0 +1,12 @@
+.buttons-default {
+cursor: pointer;
+  height: 35px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+}

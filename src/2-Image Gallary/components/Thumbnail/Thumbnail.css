@@ -1,0 +1,29 @@
+.thumbnail-container {
+  width: 60%;
+  height: 60%;
+}
+
+.thumbnail-container-image {
+  display: flex;
+  flex: 1;
+  cursor: pointer;
+  margin: 18px;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.thumbnail-container-image:hover {
+  transform: scale(1.1);
+}
+
+.thumbnail-image {
+  width: 80%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+.thumbnail-container.clicked {
+    box-shadow: 0 0 0 2px #3498db;
+  }
