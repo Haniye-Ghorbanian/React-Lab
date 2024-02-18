@@ -1,7 +1,11 @@
 .height {
-    height: 570px;
+  height: 570px;
 }
 
 .bgBlue {
-    background-color: #b3cbff;
+  background-color: #b3cbff;
+}
+
+.input:focus + .label {
+  transform: translate(1.5rem, -1.5rem); /* Transformed position on focus */
 }
