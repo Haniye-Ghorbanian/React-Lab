@@ -4,6 +4,7 @@ import ImageGallery from "./2-Image Gallary/components/ImageGallery/ImageGallery
 import images from "./2-Image Gallary/data";
 import Form from "./3-React Form/form";
 import Convertor from "./4-Convertor/convertor";
+import FormWithValidation from "./6-Form with validation/FormWithValidation";
 
 function Practice1() {
   return <PageWrapper data={data}></PageWrapper>;
@@ -22,8 +23,14 @@ function Practice4() {
   return <Convertor />;
 }
 
+const Practice6 = () => {
+  return <FormWithValidation />
+}
+
 export default Practice1;
 export { Practice2 };
 export { Practice3 };
 export { Practice4 };
+
+export { Practice6 };
 
