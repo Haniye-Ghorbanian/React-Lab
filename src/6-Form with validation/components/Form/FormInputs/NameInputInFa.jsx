@@ -1,5 +1,3 @@
-
-
 const NameInputInFa = () => {
   return (
     <div className="w-full">
