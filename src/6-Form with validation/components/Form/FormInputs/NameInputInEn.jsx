@@ -30,7 +30,7 @@ const NameInputInEn = () => {
         نام و نام‌خانوادگی به انگلیسی
       </label>
       <input
-        className={`w-full h-12 focus:outline-none rounded-3xl border-solid border-2 border-slate-200 rounded-2xl px-4 py-5 text-sm ${
+        className={`w-full h-12 focus:outline-none focus:transition focus:ease-in-out focus:duration-200 rounded-3xl border-solid border-2 border-slate-200 rounded-2xl px-4 py-5 text-sm ${
           isEnglishNameValid  === false
             ? "focus:ring-2 focus:ring-red-400 focus:border-none"
             : isEnglishNameValid  === true
