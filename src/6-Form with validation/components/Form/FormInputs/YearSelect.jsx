@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 const toPersianNumber = (number) => {
+  const [year, setYear] = useState("");
+
   const persianNumbers = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"];
   return String(number).replace(/[0-9]/g, (match) => persianNumbers[+match]);
 };

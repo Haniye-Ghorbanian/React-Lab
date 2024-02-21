@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 const EmailInput = () => {
+  const [email, setEmail] = useState("")
+
   return (
     <div className="w-full">
       <label className="text-sm" htmlFor="nameFa">

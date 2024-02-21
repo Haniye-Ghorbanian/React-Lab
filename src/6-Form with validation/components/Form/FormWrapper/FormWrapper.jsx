@@ -9,7 +9,7 @@ import FormBtn from "../FormBtn/FormBtn";
 const FormWrapper = () => {
   return (
     <div
-      className={`w-2/5 h-96 flex flex-col align-center justify-around py-4 px-16 ${styles.height}`}
+      className={`w-2/5 h-96 flex flex-col items-center px-16 justify-between  ${styles.height}`}
     >
       <FormInputsWrapper>
         <NameInputInFa />
