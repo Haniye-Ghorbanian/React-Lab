@@ -6,11 +6,12 @@ const NameInputInEn = () => {
   const { valid, message } = warning;
 
   const handleEnglishName = (e) => {
-    const inputValue = e.target.value;
+
+    setEnglishName(e.target.value);
     // Regular expression to match English characters
     const englishRegex = /^[a-zA-Z\s]*$/;
 
-    if (englishRegex.test(inputValue)) {
+    if (englishRegex.test(englishName)) {
       // Input contains only English characters, update the state
       setEnglishName(inputValue);
       setWarning({ valid: true, message: "" });
