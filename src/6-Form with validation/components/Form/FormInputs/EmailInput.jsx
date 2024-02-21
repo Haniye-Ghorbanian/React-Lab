@@ -10,13 +10,11 @@ console.log(isEmailValid)
   useEffect(() => {
 
     if (email === "") {
-      // If the email field is empty, consider it valid and clear any error message
       setIsEmailValid(null);
       setEmailErrorMessage("");
       return;
     }
     const timeoutId = setTimeout(() => {
-      // Your email validation logic here
       const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
   
       if (emailRegex.test(email)) {
