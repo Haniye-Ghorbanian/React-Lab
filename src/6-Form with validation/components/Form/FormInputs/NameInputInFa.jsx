@@ -12,6 +12,7 @@ const NameInputInFa = () => {
     for (let i = 0; i < inputValue.length; i++) {
       const charCode = inputValue.charCodeAt(i);
       if (!(charCode >= 0x0600 && charCode <= 0x06ff)) {
+        e.target.value = "";
         setIsPersianNameValid(false);
         setMessage("لطفا زبان کیبورد خود را روی فارسی قرار دهید");
       } else {

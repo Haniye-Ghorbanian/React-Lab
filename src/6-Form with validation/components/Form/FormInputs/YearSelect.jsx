@@ -14,17 +14,23 @@ const YearSelect = ({ onChange }) => {
   }
 
   return (
-    <select
-      name="year"
-      onChange={onChange}
-      className="border border-gray-300 rounded px-3 py-2 focus:outline-none border-slate-300 text-sm p-1 mr-4 mb-6"
-    >
-      {years.map((year, index) => (
-        <option key={index} value={year}>
-          {toPersianNumber(year)}
-        </option>
-      ))}
-    </select>
+    <div className="flex items-center ">
+      <label htmlFor="birthYear" className="text-sm ml-3">
+        سال تولد
+      </label>
+      <select
+        id="birthYear"
+        name="year"
+        onChange={onChange}
+        className="border border-gray-300 rounded px-3 py-2 focus:outline-none border-slate-300 text-sm p-1"
+      >
+        {years.map((year, index) => (
+          <option key={index} value={year}>
+            {toPersianNumber(year)}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 };
 
