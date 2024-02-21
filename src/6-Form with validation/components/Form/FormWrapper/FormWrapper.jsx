@@ -3,7 +3,7 @@ import FormInputsWrapper from "../FormInputsWrapper/FormInputsWrapper";
 import NameInputInFa from "../FormInputs/NameInputInFa";
 import NameInputInEn from "../FormInputs/NameInputInEn";
 import EmailInput from "../FormInputs/EmailInput";
-import YearInput from "../FormInputs/YearInput";
+import YearSelect from "../FormInputs/YearSelect";
 import FormBtn from "../FormBtn/FormBtn";
 
 const FormWrapper = () => {
@@ -15,7 +15,7 @@ const FormWrapper = () => {
         <NameInputInFa />
         <NameInputInEn></NameInputInEn>
         <EmailInput></EmailInput>
-        <YearInput></YearInput>
+        <YearSelect></YearSelect>
         <FormBtn></FormBtn>
       </FormInputsWrapper>
     </div>
