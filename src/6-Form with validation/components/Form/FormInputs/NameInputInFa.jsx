@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useContext  } from "react";
+import ValidationContext from "../../../context/validation-context";
 
 const NameInputInFa = () => {
   const [persianName, setPersianName] = useState("");
-  const [isPersianNameValid, setIsPersianNameValid] = useState(null);
   const [message, setMessage] = useState("");
+  const { setIsPersianNameValid, isPersianNameValid } = useContext(ValidationContext);
+ 
 
   const handlePersianName = (e) => {
     const inputValue = e.target.value;

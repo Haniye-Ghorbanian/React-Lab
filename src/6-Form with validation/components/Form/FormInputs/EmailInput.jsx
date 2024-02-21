@@ -1,12 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import ValidationContext from "../../../context/validation-context";
 
 const EmailInput = () => {
   const [email, setEmail] = useState("");
-  const [isEmailValid, setIsEmailValid] = useState(null);
   const [emailErrorMessage, setEmailErrorMessage] = useState("");
+  const { setIsEmailValid, isEmailValid } = useContext(ValidationContext);
 
 
-console.log(isEmailValid)
+
   useEffect(() => {
 
     if (email === "") {

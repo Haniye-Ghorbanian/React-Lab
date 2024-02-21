@@ -1,11 +1,9 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import ValidationContext from "../../../context/validation-context";
 
 const YearSelect = () => {
   const [year, setYear] = useState("");
-  const [isYearSelected, setIsYearSelected] = useState(false);
-
-
-
+  const { isYearSelected, setIsYearSelected } = useContext(ValidationContext);
 
   const toPersianNumber = (number) => {
     const persianNumbers = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"];
@@ -16,19 +14,10 @@ const YearSelect = () => {
     years.push(year);
   }
 
-
-  
-
-
-
   const handleYearChange = (e) => {
     e.target.value !== "" ? setIsYearSelected(true) : setIsYearSelected(false);
   };
 
-
-
-
-  console.log(isYearSelected);
   return (
     <div className="flex items-center ">
       <label htmlFor="birthYear" className="text-sm ml-3">

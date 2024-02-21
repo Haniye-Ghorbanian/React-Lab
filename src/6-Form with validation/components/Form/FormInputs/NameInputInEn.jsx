@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import ValidationContext from "../../../context/validation-context";
 
 const NameInputInEn = () => {
   const [englishName, setEnglishName] = useState("");
-  const [isEnglishNameValid, setIsEnglishNameValid] = useState(null);
   const [warningMessage, setWarningMessage] = useState("");
+  const { setIsEnglishNameValid, isEnglishNameValid } = useContext(ValidationContext);
 
   const handleEnglishName = (e) => {
 
