@@ -1,10 +1,11 @@
 import { useState, useContext } from "react";
 import ValidationContext from "../../../context/validation-context";
+import WarningContext from "../../../context/waring-context";
 
 const NameInputInEn = () => {
   const [englishName, setEnglishName] = useState("");
-  const [warningMessage, setWarningMessage] = useState("");
   const { setIsEnglishNameValid, isEnglishNameValid } = useContext(ValidationContext);
+  const {EnNameErrorMessage, setEnNameErrorMessage} = useContext(WarningContext);
 
   const handleEnglishName = (e) => {
 
@@ -16,12 +17,12 @@ const NameInputInEn = () => {
       // Input contains only English characters, update the state
       setEnglishName(inputValue);
       setIsEnglishNameValid(true);
-      setWarningMessage("");
+      setEnNameErrorMessage("");
     } else {
       // Input contains Persian characters, show warning message
       e.target.value = "";
       setIsEnglishNameValid(false);
-      setWarningMessage("لطفا زبان کیبورد خود را انگلیسی قرار دهید.");;
+      setEnNameErrorMessage("لطفا زبان کیبورد خود را انگلیسی قرار دهید.");;
     }
   };
 
@@ -31,7 +32,7 @@ const NameInputInEn = () => {
         نام و نام‌خانوادگی به انگلیسی
       </label>
       <input
-        className={`w-full h-12 focus:outline-none focus:transition focus:ease-in-out focus:duration-200 rounded-3xl border-solid border-2 border-slate-200 rounded-2xl px-4 py-5 text-sm ${
+        className={`w-full h-12 focus:outline-none focus:transition focus:ease-in-out focus:duration-200 rounded-3xl border-solid border-2 border-slate-200 rounded-2xl px-4 py-5 text-sm m-0 mt-3 ${
           isEnglishNameValid  === false
             ? "focus:ring-2 focus:ring-red-400 focus:border-none"
             : isEnglishNameValid  === true
@@ -42,7 +43,7 @@ const NameInputInEn = () => {
         id="nameFa"
         onChange={handleEnglishName}
       />
-      {!isEnglishNameValid  && <span className="text-red-500 text-xs mr-5">{warningMessage}</span>}
+      <span className="text-red-500 text-xs mr-5">{!isEnglishNameValid && EnNameErrorMessage }</span>
     </div>
   );
 };
