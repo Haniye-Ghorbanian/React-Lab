@@ -54,14 +54,14 @@ const EmailInput = () => {
           isEmailValid === false
             ? "focus:ring-2 focus:ring-red-400 focus:border-none"
             : isEmailValid === true
-            ? "focus:ring-2 focus:ring-green-400 focus:border-none"
-            : "focus:ring-2 focus:ring-blue-400 focus:border-none"
+            ? "focus:ring-2 focus:ring-green-400 focus:border-none border-green-400"
+            : "focus:ring-2 focus:ring-blue-400 focus:border-none border-slate-200"
         }`}
         type="text"
         id="nameFa"
         onChange={handleEmail}
       />
-      <span className={`text-red-500 text-xs mr-5 h-6 ${animation.alert}`}>{!isEmailValid && emailErrorMessage }</span>
+      <span className={`text-red-500 text-xs mr-5 h-6`}>{!isEmailValid && emailErrorMessage }</span>
     </div>
   );
 };

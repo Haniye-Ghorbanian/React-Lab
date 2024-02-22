@@ -33,19 +33,36 @@ const FormBtn = () => {
 
   const handleSubmmitBtn = () => {
     setIsSummitIsClicked(true);
-    if (!isEmailValid && !isEnglishNameValid && !isPersianNameValid && !isYearSelected) {
-      setEmailErrorMessage("وارد کردن ایمیل اجباری است")
-      setEnNameErrorMessage("پر کردن این فیلد اجباری است")
-      setFaNameErrorMessage("پر کردن این فیلد اجباری است")
-      setYearErrorMessage("پر کردن این فیلد اجباری است")
-    } else if(!isEmailValid && !isEnglishNameValid && !isPersianNameValid) {
-      setEmailErrorMessage("وارد کردن ایمیل اجباری است")
-      setEnNameErrorMessage("پر کردن این فیلد اجباری است")
-      setFaNameErrorMessage("پر کردن این فیلد اجباری است")
-    } else if(!isEmailValid && !isEnglishNameValid) {
-      setEmailErrorMessage("وارد کردن ایمیل اجباری است")
-      setEnNameErrorMessage("پر کردن این فیلد اجباری است")
-    } 
+    if (
+      !isEmailValid &&
+      !isEnglishNameValid &&
+      !isPersianNameValid &&
+      !isYearSelected
+    ) {
+      setEmailErrorMessage("وارد کردن ایمیل اجباری است");
+      setEnNameErrorMessage("پر کردن این فیلد اجباری است");
+      setFaNameErrorMessage("پر کردن این فیلد اجباری است");
+      setYearErrorMessage("پر کردن این فیلد اجباری است");
+    } else {
+      // Reset error messages
+      setEmailErrorMessage("");
+      setEnNameErrorMessage("");
+      setFaNameErrorMessage("");
+      setYearErrorMessage("");
+
+      if (!isEmailValid) {
+        setEmailErrorMessage("وارد کردن ایمیل اجباری است");
+      }
+      if (!isEnglishNameValid) {
+        setEnNameErrorMessage("پر کردن این فیلد اجباری است");
+      }
+      if (!isPersianNameValid) {
+        setFaNameErrorMessage("پر کردن این فیلد اجباری است");
+      }
+      if (!isYearSelected) {
+        setYearErrorMessage("پر کردن این فیلد اجباری است");
+      }
+    }
   };
 
   useEffect(() => {

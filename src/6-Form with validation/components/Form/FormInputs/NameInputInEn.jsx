@@ -36,14 +36,14 @@ const NameInputInEn = () => {
           isEnglishNameValid  === false
             ? "focus:ring-2 focus:ring-red-400 focus:border-none"
             : isEnglishNameValid  === true
-            ? "focus:ring-2 focus:ring-green-400 focus:border-none"
-            : "focus:ring-2 focus:ring-blue-400 focus:border-none"
+            ? "focus:ring-2 focus:ring-green-400 focus:border-none border-green-400"
+            : "focus:ring-2 focus:ring-blue-400 focus:border-none  border-slate-200"
         }`}
         type="text"
         id="nameFa"
         onChange={handleEnglishName}
       />
-      <span className="text-red-500 text-xs mr-5">{!isEnglishNameValid && EnNameErrorMessage }</span>
+      <span className={`text-red-500 text-xs mr-5 ${!isEnglishNameValid && `transition-opacity duration-200 delay-100`}`}>{!isEnglishNameValid && EnNameErrorMessage }</span>
     </div>
   );
 };
